@@ -1,0 +1,23 @@
+:root {
+  --brand-1: #4c6ef5;
+  --brand-2: #364fc7;
+  --gray-1: #191c1f;
+  --gray-2: #212529;
+  --gray-3: #343a40;
+  --gray-4: #adb5bd;
+  --gray-5: #ced4da;
+  --gray-6: #edf2ff;
+  --gray-7: #f8f9fa;
+  --title1: 3.5rem;
+  --title2: 2.5rem;
+  --title3: 2rem;
+  --text1: 1.25rem;
+  --text2: 1.125rem;
+  --text3: 1rem;
+  --text4: 1rem;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+@import url(./reset.css);
+@import url(./index.css);
