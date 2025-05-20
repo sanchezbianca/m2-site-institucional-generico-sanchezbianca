@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Página Institucional Genérica</title>
+    <link rel="stylesheet" href="./src/styles/globalStyles.css" />
   </head>
   <body>
     <!-- ====== Header ====== -->
@@ -24,11 +25,18 @@
           <h1 class="banner__title">
             Desenvolvendo <span>suas</span> próximas habilidades
           </h1>
-          <p class="banner__text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s
-          </p>
+
+          <div>
+            <p class="banner__text">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+            <p class="banner__text">
+              Lorem Ipsum has been the industry's standard dummy text ever since
+              the 1500s
+            </p>
+          </div>
+
           <button class="banner__button">Sobre nós</button>
         </div>
       </section>
@@ -110,12 +118,14 @@
         <div class="comments__container">
           <!-- RIGHT SIDE -->
           <div class="comments__intro">
-            <h2 class="comments__title">O que nossos alunos comentam?</h2>
-            <p class="comments__text">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s
-            </p>
+            <div class="comments__intro-content">
+              <h2 class="comments__title">O que nossos alunos comentam?</h2>
+              <p class="comments__text-right">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s
+              </p>
+            </div>
           </div>
           <!-- LEFT SIDE -->
           <ul class="comments__list">

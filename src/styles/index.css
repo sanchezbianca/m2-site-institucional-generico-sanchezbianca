@@ -1,0 +1,259 @@
+:root {
+  --brand-1: #4c6ef5;
+  --brand-2: #364fc7;
+  --gray-1: #191c1f;
+  --gray-2: #212529;
+  --gray-3: #343a40;
+  --gray-4: #adb5bd;
+  --gray-5: #ced4da;
+  --gray-6: #edf2ff;
+  --gray-7: #f8f9fa;
+  --title1: 3.5rem;
+  --title2: 2.5rem;
+  --title3: 2rem;
+  --text1: 1.25rem;
+  --text2: 1.125rem;
+  --text3: 1rem;
+  --text4: 1rem;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.header {
+  background-color: var(--gray-1);
+  border-bottom: 2px solid var(--brand-1);
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  align-items: center;
+}
+
+.header__button {
+  border: 1px solid var(--gray-7);
+  color: var(--gray-7);
+  background-color: var(--gray-1);
+  font-weight: 600;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+
+.banner {
+  background-color: var(--gray-2);
+}
+
+.banner__content {
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 44px;
+  justify-content: center;
+}
+
+.banner__title {
+  font-size: var(--title1);
+  font-weight: 600;
+  line-height: 140%;
+  color: var(--gray-7);
+}
+
+.banner__title span {
+  color: var(--brand-2);
+}
+
+.banner__text {
+  font-size: var(--text1);
+  color: var(--gray-4);
+  line-height: 150%;
+  text-align: center;
+}
+
+.banner__button {
+  background-color: var(--brand-1);
+  color: var(--gray-7);
+  padding: 1rem 2rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.about {
+  background-color: var(--gray-1);
+  padding: 2.5rem 7rem;
+}
+
+.about__content {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+
+.about__title {
+  font-size: var(--title2);
+  font-weight: 600;
+  line-height: 160%;
+  color: var(--gray-6);
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.about__text {
+  font-size: var(--text1);
+  line-height: 150%;
+  font-weight: 400;
+  color: var(--gray-5);
+  text-align: justify;
+  flex: 1;
+}
+
+.faq {
+  background-color: var(--gray-2);
+  color: var(--gray-4);
+  padding: 2.5rem 7rem;
+}
+
+.faq__container {
+  display: flex;
+  flex-direction: row;
+  text-align: justify;
+  gap: 5rem;
+}
+
+.faq__intro {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+}
+
+.faq__title {
+  font-size: var(--title2);
+  font-weight: 600;
+  line-height: 160%;
+  color: var(--gray-6);
+}
+
+.faq__text {
+  font-size: var(--text1);
+  line-height: 150%;
+}
+
+.faq__button {
+  background-color: var(--brand-1);
+  color: var(--gray-7);
+  padding: 1rem 2rem;
+  align-self: flex-start;
+  border: none;
+  font-weight: 600;
+}
+
+.faq__list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+}
+
+.faq__item {
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+}
+
+.faq__question {
+  font-size: var(--title3);
+  font-weight: 600;
+  line-height: 160%;
+  color: var(--gray-6);
+}
+
+.faq__answer {
+  font-size: var(--text1);
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.comments__container {
+  background-color: var(--gray-2);
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 2.5rem 7rem;
+}
+
+.comments__intro {
+  flex: 1;
+}
+
+.comments__intro-content {
+  background-color: var(--brand-1);
+  padding: 4rem 2rem;
+  margin-left: 6.5rem;
+}
+
+.comments__title {
+  font-size: var(--title2);
+  color: var(--gray-7);
+  font-weight: 600;
+  line-height: 160%;
+}
+
+.comments__text-right {
+  font-size: var(--text1);
+  line-height: 150%;
+  color: var(--gray-7);
+  font-weight: 400;
+}
+
+.comments__list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.comments__item {
+  display: flex;
+}
+
+.comments__user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-right: 1rem;
+  width: 35%;
+}
+
+.comments__user-name {
+  font-size: var(--title3);
+  font-weight: 600;
+  line-height: 160%;
+  color: var(--gray-6);
+}
+
+.comments__user-role {
+  font-size: var(--text3);
+  line-height: 150%;
+  color: var(--gray-4);
+}
+
+.comments__text {
+  font-size: var(--text2);
+  line-height: 150%;
+  color: var(--gray-5);
+  text-align: justify;
+  width: 65%;
+}
+
+.footer {
+  background-color: var(--gray-1);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
