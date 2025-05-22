@@ -85,6 +85,10 @@ body {
   font-weight: 600;
 }
 
+.banner__button:hover {
+  background-color: var(--brand-2);
+}
+
 .about {
   background-color: var(--gray-1);
   padding: 2.5rem 7rem;
@@ -157,6 +161,11 @@ body {
   align-self: flex-start;
   border: none;
   font-weight: 600;
+  cursor: pointer;
+}
+
+.faq__button:hover {
+  background-color: var(--brand-2);
 }
 
 .faq__list {
@@ -264,4 +273,82 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.modal__controller {
+  background-color: var(--gray-2);
+  border: solid 1px var(--brand-1);
+  padding: 2.5rem 1.5rem;
+  width: 450px;
+}
+
+.modal__close {
+  background-color: var(--gray-3);
+  color: var(--gray-4);
+  border: none;
+  padding: 0.5rem 0.75rem;
+  position: absolute;
+  right: 1.5rem;
+  top: 2.5rem;
+  cursor: pointer;
+}
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.modal__title {
+  font-size: var(--title3);
+  line-height: 160%;
+  font-weight: 600;
+  color: var(--gray-7);
+}
+
+.modal__text {
+  font-size: var(--text3);
+  line-height: 150%;
+  color: var(--gray-5);
+}
+
+.modal__input {
+  background-color: var(--gray-1);
+  font-size: var(--text1);
+  line-height: 150%;
+  color: var(--gray-4);
+  border: solid 1px var(--gray-1);
+  padding: 0.75rem 1.75rem;
+}
+
+.modal__input-button {
+  background-color: var(--brand-1);
+  color: var(--gray-7);
+  font-size: var(--text4);
+  line-height: 150%;
+  font-weight: 600;
+  border: solid 1px var(--brand-1);
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+
+.modal__input-button:hover {
+  background-color: var(--brand-2);
+}
+
+.modal__input:focus {
+  background-color: var(--gray-2);
+  outline: none;
+}
+
+.modal__input:focus::placeholder {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.modal__input:valid {
+  background-color: var(--gray-3);
+}
+
+.modal__controller::backdrop {
+  background-color: rgb(0, 0, 0, 0.6);
 }
