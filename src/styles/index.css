@@ -8,13 +8,14 @@
   --gray-5: #ced4da;
   --gray-6: #edf2ff;
   --gray-7: #f8f9fa;
-  --title1: 3.5rem;
-  --title2: 2.5rem;
-  --title3: 2rem;
+  --title1: clamp(2.25rem, 1.186rem + 4.007vw, 3.75rem);
+  --title2: clamp(1.75rem, 1.218rem + 2.003vw, 2.5rem);
+  --title3: clamp(1.5rem, 1.145rem + 1.336vw, 2rem);
   --text1: 1.25rem;
   --text2: 1.125rem;
   --text3: 1rem;
   --text4: 1rem;
+  --gap-5: clamp(1.25rem, -1.411rem + 10.017vw, 5rem);
 }
 
 body {
@@ -41,8 +42,9 @@ body {
   color: var(--gray-7);
   background-color: var(--gray-1);
   font-weight: 600;
-  padding: 1rem 2rem;
+  padding: 1rem clamp(1rem, 0.29rem + 2.671vw, 2rem);
   cursor: pointer;
+  margin-left: 1rem;
 }
 
 .banner {
@@ -54,7 +56,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 44px;
+  gap: clamp(1.25rem, 0.186rem + 4.007vw, 2.75rem);
   justify-content: center;
 }
 
@@ -63,6 +65,8 @@ body {
   font-weight: 600;
   line-height: 140%;
   color: var(--gray-7);
+  text-align: center;
+  padding: 0 2rem;
 }
 
 .banner__title span {
@@ -91,13 +95,13 @@ body {
 
 .about {
   background-color: var(--gray-1);
-  padding: 2.5rem 7rem;
+  padding: 2.5rem clamp(2rem, -13rem + 31.25vw, 7rem);
 }
 
 .about__content {
   display: flex;
   flex-direction: row;
-  gap: 5rem;
+  gap: var(--gap-5);
 }
 
 .about__title {
@@ -122,21 +126,21 @@ body {
 .faq {
   background-color: var(--gray-2);
   color: var(--gray-4);
-  padding: 2.5rem 7rem;
+  padding: 2.5rem clamp(2rem, -13rem + 31.25vw, 7rem);
 }
 
 .faq__container {
   display: flex;
   flex-direction: row;
   text-align: justify;
-  gap: 5rem;
+  gap: var(--gap-5);
 }
 
 .faq__intro {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 33px;
+  gap: clamp(0.938rem, 0.139rem + 3.005vw, 2.063rem);
   position: sticky;
   top: 6.5rem;
   align-self: flex-start;
@@ -172,13 +176,13 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 33px;
+  gap: clamp(0.938rem, 0.139rem + 3.005vw, 2.063rem);
 }
 
 .faq__item {
   display: flex;
   flex-direction: column;
-  gap: 33px;
+  gap: clamp(0.938rem, 0.139rem + 3.005vw, 2.063rem);
 }
 
 .faq__question {
@@ -198,7 +202,7 @@ body {
   background-color: var(--gray-2);
   display: flex;
   flex-direction: row-reverse;
-  padding: 2.5rem 7rem;
+  padding: 2.5rem clamp(2rem, -13rem + 31.25vw, 7rem);
 }
 
 .comments__intro {
@@ -208,7 +212,7 @@ body {
 .comments__intro-content {
   background-color: var(--brand-1);
   padding: 4rem 2rem;
-  margin-left: 6.5rem;
+  margin-left: clamp(1.75rem, -1.62rem + 12.688vw, 6.5rem);
   position: sticky;
   top: 6.5rem;
 }
@@ -231,7 +235,7 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: var(--gap-5);
 }
 
 .comments__item {
@@ -241,7 +245,7 @@ body {
 .comments__user-info {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.7rem;
   margin-right: 1rem;
   width: 35%;
 }
@@ -351,4 +355,102 @@ body {
 
 .modal__controller::backdrop {
   background-color: rgb(0, 0, 0, 0.6);
+}
+@media (max-width: 1024px) {
+  .comments__item {
+    display: flex;
+    flex-direction: column;
+  }
+  .comments__user-info {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+  }
+
+  .comments__user-role {
+    align-self: center;
+  }
+
+  .comments__text {
+    width: auto;
+  }
+}
+@media (max-width: 768px) {
+  .banner__text {
+    padding: 0 1rem;
+  }
+
+  .about {
+    padding: 2.5rem 2rem;
+  }
+  .about__content {
+    display: flex;
+    flex-direction: column;
+  }
+  .about__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .faq {
+    padding: 2.5rem 2rem;
+  }
+
+  .faq__container {
+    display: flex;
+    flex-direction: column;
+  }
+  .faq__intro {
+    display: flex;
+    justify-content: center;
+    position: static;
+  }
+
+  .faq__title {
+    text-align: center;
+  }
+
+  .faq__button {
+    align-self: none;
+    width: 100%;
+  }
+
+  .faq__question {
+    text-align: center;
+  }
+
+  .comments__container {
+    flex-direction: column;
+    padding: 0 2rem;
+    padding-bottom: 2.5rem;
+  }
+  .comments__intro {
+    padding-bottom: 2.5rem;
+  }
+
+  .comments__intro-content {
+    margin: 0;
+    position: static;
+    padding: 3rem 2rem;
+  }
+
+  .comments__title {
+    padding-bottom: 2rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .header__button {
+    display: none;
+  }
+
+  .header__container {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .banner__content {
+    padding: 2.5rem 0;
+  }
 }
